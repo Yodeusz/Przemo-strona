@@ -60,6 +60,17 @@ body {
     width: 60%;
 }
 
+section.gallery img{
+    height: 350px;
+    width: auto;
+    border: 5px solid transparent;
+    transition: border-color 1s ease;1
+}
+
+section.gallery img:hover{
+    border-color: gold;
+}
+
 @media screen and (max-width: 1000px) {
     .info {
         width: 100vw;
