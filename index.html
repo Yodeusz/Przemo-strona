@@ -9,12 +9,12 @@
     <body>
         <nav>
             <ul>
-                <li>start</li>
-                <li>about</li>
-                <li>gallery</li>
+                <li class="fake-link" onclick="sectionSlide('start')">start</li>
+                <li class="fake-link" onclick="sectionSlide('about')">about</li>
+                <li class="fake-link" onclick="sectionSlide('gallery')">gallery</li>
             </ul>
         </nav>
-        <section id="main">
+        <section id="start">
             
         </section>
         <section id="about">
@@ -76,6 +76,24 @@
             <div id="modal" onclick="">
                     <span class="close" onclick="closeModal()">X</span>
                     <img id="modal-content" src=""></img>
+                    <div>dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
+                    </div>
                 </div>
         </section>
         <footer>
@@ -92,6 +110,17 @@
                 function closeModal(){
                     document.getElementById('modal').style.display = "none";
                 }
+
+                function sectionSlide(element) {
+                var section = document.getElementById(element);
+                
+                var offset = section.offsetTop;
+                window.scrollTo({
+                    top: offset,
+                    behavior: "smooth"
+                });
+                
+            }
 
                 window.addEventListener('scroll', function(e){
                 var scrollPosition = window.pageYOffset;
