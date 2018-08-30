@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <html>
     <head>
             <link rel="stylesheet" type="text/css" href="style.css">
             <meta charset="utf-8">
             <meta name="theme-color" content="#88b04b">
             <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
-            <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Montserrat" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Montserrat" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script src="parallax.min.js"></script>
     </head>
     <body>
         <nav>
@@ -14,7 +17,7 @@
                 <li class="fake-link" onclick="sectionSlide('gallery')">gallery</li>
             </ul>
         </nav>
-        <section id="start">
+        <section id="start" data-parallax="scroll" data-image-src="./images/Tajemnica_Wcielenia.jpeg">
             
         </section>
         <section id="about">
@@ -31,7 +34,7 @@
             </div>
         </section>
         <section id="gallery">
-            <div class="gallery-header">
+            <div class="gallery-header" data-parallax="scroll" data-image-src="./images/fullsizeoutput_8c0.jpg">
                 <span>gallery</span>
             </div>
             <div class="gallery-wrapper">
@@ -45,55 +48,36 @@
                         <img src="./images/fullsizeoutput_937.jpeg" onclick="openModal(this)">
                     </div>
                     <div class="column">
-                            <img src="./images/szopka.jpeg" onclick="openModal(this)">
+                            <img src="./images/Tajemnica_Wcielenia.jpeg" title="Tajemnica Wcielenia" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_8f8.jpeg" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_8fb.jpeg" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_906.jpeg" onclick="openModal(this)">
+                            <img src="./images/Ostatnia_Wieczerza(2018).jpeg" title="Ostatnia Wieczerza (2018)" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_916.jpeg" onclick="openModal(this)">
-                            
-
                     </div>
                     <div class="column">
-                            <img src="./images/fullsizeoutput_8ad.jpeg" onclick="openModal(this)">
+                            <img src="./images/Tajemnica_Wielkiej_Soboty(2017).jpeg" title="Tajemnica Wielkiej Soboty (2017)" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_90a.jpeg" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_90b.jpeg" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_919.jpeg" onclick="openModal(this)">
-                            <img src="./images/IMG_6806.jpeg" onclick="openModal(this)">
-                            
+                            <img src="./images/Wszyscy_święci_Towarzystwa_Jezusowego.jpeg" title="Wszyscy święci Towarzystwa Jezusowego" onclick="openModal(this)">
+                            <img src="./images/Cichy_i_pokornego_serca(2017).jpeg" title="Cichy i pokornego serca (2017)" onclick="openModal(this)">
+                            <img src="./images/mandylion_(2018).jpeg" title="Mandylion (2018)" onclick="openModal(this)">
 
                     </div>
                     <div class="column">
                             <img src="./images/IMG_3605.jpeg" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_90e.jpeg" onclick="openModal(this)">
+                            <img src="./images/Umycie_nóg(2018).jpeg" title="Umycie nóg (2018)" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_904.jpeg" onclick="openModal(this)">
-                            
                             <img src="./images/kart.jpeg" onclick="openModal(this)">
-                            <img src="./images/IMG_4065.jpeg" onclick="openModal(this)">
+                            <img src="./images/Katabasis_Zstąpienie(2015).jpeg" title="Katabasis/Zstąpienie (2015)" onclick="openModal(this)">
 
                     </div>
                 </div>
             </div>
             <div id="modal" onclick="">
                     <span class="close" onclick="closeModal()">X</span>
-                    <img id="modal-content" src=""></img>
-                    <div>dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                        dasdadsasdasdasdasdasdasdasdasdasdasdasdasdasd<br>
-                    </div>
+                    
+                    <img  id="modal-image" src="">
+                    <p id="title"></p>
                 </div>
         </section>
         <footer>
@@ -102,9 +86,11 @@
         <script>
                 function openModal(image){
                     var source = image.src;
-                    document.getElementById('modal-content').src = source;
+                    document.getElementById('modal-image').src = source;
                     document.getElementById('modal').style.display = 'block';
-                    alert(image.index());
+
+                    document.getElementById('title').innerHTML = image.title;
+                    
                 }
     
                 function closeModal(){
