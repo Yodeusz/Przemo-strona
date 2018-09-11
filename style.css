@@ -160,9 +160,15 @@ footer{
     display: none;
     overflow: auto;
 }
+
+.modal-wrapper {
+    text-align: center;
+    color: white;
+}
+
 #modal-image{
-    max-width: 70%;
-    max-height: 90vh;
+    max-width: 85%;
+    max-height: 85vh;
     margin: auto;
     margin-top: 5vh;
     display: block;
@@ -176,9 +182,9 @@ footer{
     to {opacity: 1;}
 }
 #modal .close{
-    position: fixed;
-    right: 20;
-    top: 15;
+    position: absolute;
+    right: 25px;
+    top: 15px;
     color: rgba(255, 255, 255, 0.5);
     transition: color 0.2s;
     font-size: 35px;

@@ -3,7 +3,7 @@
     <head>
             <link rel="stylesheet" type="text/css" href="style.css">
             <meta charset="utf-8">
-            <meta name="theme-color" content="#88b04b">
+            <meta name="theme-color" content="#881508">
             <meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
             <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff|Montserrat" rel="stylesheet">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -42,22 +42,22 @@
                     <div class="column">
                         <img src="./images/fullsizeoutput_8f4.jpeg" onclick="openModal(this)">
                         <img src="./images/fullsizeoutput_8af.jpeg" onclick="openModal(this)">
-                        <img src="./images/fullsizeoutput_930.jpeg" onclick="openModal(this)">
+                        <img src="./images/Stanislaw_Kostka(2018).jpeg" title="Stanisław Kostka (2018)" onclick="openModal(this)">
                         <img src="./images/IMG_3703.jpeg" onclick="openModal(this)">
-                        <img src="./images/IMG_6676.jpeg" onclick="openModal(this)">
-                        <img src="./images/fullsizeoutput_937.jpeg" onclick="openModal(this)">
+                        <img src="./images/Pokutujacy_Piotr(2017).jpeg" title="Pokutujący Piotr (2017)" onclick="openModal(this)">
+                        <img src="./images/Ostatnia_Wieczerza(2013).jpeg" title="Ostatnia Wieczerza (2013)" onclick="openModal(this)">
                     </div>
                     <div class="column">
                             <img src="./images/Tajemnica_Wcielenia.jpeg" title="Tajemnica Wcielenia" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_8f8.jpeg" onclick="openModal(this)">
                             <img src="./images/fullsizeoutput_8fb.jpeg" onclick="openModal(this)">
                             <img src="./images/Ostatnia_Wieczerza(2018).jpeg" title="Ostatnia Wieczerza (2018)" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_916.jpeg" onclick="openModal(this)">
+                            <img src="./images/Iognaid(2017).jpeg" title="Iognaid (2018)" onclick="openModal(this)">
                     </div>
                     <div class="column">
                             <img src="./images/Tajemnica_Wielkiej_Soboty(2017).jpeg" title="Tajemnica Wielkiej Soboty (2017)" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_90a.jpeg" onclick="openModal(this)">
-                            <img src="./images/fullsizeoutput_90b.jpeg" onclick="openModal(this)">
+                            <img src="./images/Sw_Ignacy_piszacy_Konstytucje_TJ(2018).jpeg" title="Św. Ignacy Piszący Konstytujce TJ (2018)" onclick="openModal(this)">
+                            <img src="./images/Bitwa_o_Pampelune(2018).jpeg" title="Bitwa o Pampelunę (2018)" onclick="openModal(this)">
                             <img src="./images/Wszyscy_święci_Towarzystwa_Jezusowego.jpeg" title="Wszyscy święci Towarzystwa Jezusowego" onclick="openModal(this)">
                             <img src="./images/Cichy_i_pokornego_serca(2017).jpeg" title="Cichy i pokornego serca (2017)" onclick="openModal(this)">
                             <img src="./images/mandylion_(2018).jpeg" title="Mandylion (2018)" onclick="openModal(this)">
@@ -73,12 +73,13 @@
                     </div>
                 </div>
             </div>
-            <div id="modal" onclick="">
-                    <span class="close" onclick="closeModal()">X</span>
-                    
+            <div id="modal">
+                <div class="modal-wrapper">
                     <img  id="modal-image" src="">
                     <p id="title"></p>
                 </div>
+                    <span class="close" onclick="closeModal()">X</span>
+            </div>
         </section>
         <footer>
             
@@ -107,7 +108,7 @@
                 });
                 
             }
-
+                
                 window.addEventListener('scroll', function(e){
                 var scrollPosition = window.pageYOffset;
                 if (scrollPosition < 300) {
