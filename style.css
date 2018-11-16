@@ -56,6 +56,10 @@ nav ul li{
     color: white;
 }
 
+#signature {
+    fill: white;
+}
+
 #about{
     min-height: 100vh;
     display: flex;
@@ -183,6 +187,15 @@ footer{
 #modal .close:hover {
     cursor: pointer;
     color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 1300px){
+    .portfolio .thumbnail{
+        width: 33.33%;
+    }
+    #modal-content{
+        max-width: 80%;
+    }
 }
 
 @media screen and (max-width: 860px){
