@@ -103,19 +103,18 @@ nav ul li{
     background-color: rgb(27, 39, 35);
 }
 
-.portfolio {
+.gallery {
     display: flex;
     flex-wrap: wrap;
     width: 80vw;
     margin: auto;
   }
 
-.portfolio .thumbnail{
+.gallery .thumbnail{
     margin: 0;
     padding: 0;
     width: 20%;
 }
-
 
 .thumbnail img{
     width: 100%;
@@ -123,15 +122,38 @@ nav ul li{
     transition: all 0.2s ease-in-out;
 }
 
-.portfolio:hover > .thumbnail img:hover{
-    /*transform: scale3d(1.05, 1.05, 1.05);*/
+.gallery:hover > .thumbnail img:hover{
     filter: grayscale(0);
     cursor: pointer;
     z-index: 1;
 }
 
-.portfolio:hover > .thumbnail img{
+.gallery:hover > .thumbnail img{
     filter: grayscale(1);
+}
+
+#kostka .description {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#kostka .description p {
+    display: block;
+    width: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .link {
+    height: 400px;
+    width: 200px;
+    background-color: turquoise;
 }
 
 footer{
@@ -153,6 +175,7 @@ footer{
 }
 
 .modal-wrapper {
+    height: 100%;
     text-align: center;
     color: white;
     display: flex;
@@ -163,7 +186,7 @@ footer{
 #modal-image{
     max-width: 85%;
     max-height: 85vh;
-    display: block;
+    display: inline-block;
     animation-name: fade-in;
     animation-duration: 0.5s;
     overflow: auto;
@@ -190,7 +213,7 @@ footer{
 }
 
 @media screen and (max-width: 1300px){
-    .portfolio .thumbnail{
+    .gallery .thumbnail{
         width: 33.33%;
     }
     #modal-content{
@@ -215,12 +238,12 @@ footer{
         width: calc(100vw - 100px);
     }
 
-    .portfolio{
+    .gallery{
         width: 90%;
         margin: auto;
     }
 
-    .portfolio .thumbnail{
+    .gallery .thumbnail{
         width: 50%;
     }
 
