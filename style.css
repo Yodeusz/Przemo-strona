@@ -106,6 +106,7 @@ nav ul li{
 .gallery {
     display: flex;
     flex-wrap: wrap;
+	justify-content: center;
     width: 80vw;
     margin: auto;
   }
@@ -133,32 +134,121 @@ nav ul li{
 }
 
 #kostka .description {
-    width: 100%;
     padding: 50px;
     display: flex;
-    align-items: center;
+	justify-content: center;
     flex-direction: column;
 }
 
 #kostka .description p {
     display: block;
     width: 50%;
+	margin: auto;
 }
 
-.container {
+#trailer {
+	background-image: url("kostka_trailer.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#article {
+	background-image: url("kostka_artykul.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#show {
+	background-image: url("kostka_spektakl.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#buy {
+	background-image: url("kostka_komiks.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+	flex-wrap: wrap;
 }
 
-.container .link {
-    height: 400px;
-    width: 200px;
+.container .link{
+	display: block;
+	margin: 50px;
     background-color: turquoise;
+	overflow: hidden;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.container .link:hover {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+
+.container .link div{
+	height: 200px;
+    width: 300px;
+	transition: all 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: 600;
+	font-size: 25px;
+	text-align: center;
+	
+}
+
+.container .link div:hover{
+	transform: scale(1.1);
+	
 }
 
 footer{
-    height: 10vh;
+	width: 100%;
+    height: 15vh;
     background-color: rgb(49, 24, 21);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#contact span {
+	color: white;
+	font-size: 20px;
+	margin-bottom: 7px;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+}
+
+.icon {
+	display: block;
+	width: 33px;
+	height: 33px;
+	color: rgb(49, 24, 21);
+	text-decoration: none;
+	opacity: 0.5;
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.2s;
+	margin: 5px;
+}
+
+.icon:hover {
+	opacity: 1;
 }
 
 /* MODAL */
