@@ -3,6 +3,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 nav{
@@ -29,6 +30,11 @@ nav ul li{
 
 .fake-link{
     cursor: pointer;
+}
+
+.fake-link a{
+    text-decoration: none;
+    color: white;
 }
 
 .fake-link::after{
@@ -207,7 +213,6 @@ nav ul li{
 
 .container .link div:hover{
 	transform: scale(1.1);
-	
 }
 
 footer{
@@ -312,6 +317,9 @@ footer{
 }
 
 @media screen and (max-width: 860px){
+    body {
+        font-size: 12px;
+    }
     #about{
         flex-direction: column;
         width: 100vw;
