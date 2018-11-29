@@ -95,8 +95,13 @@ nav ul li{
     color: white;
 }
 
-#signature {
-    fill: white;
+.signature-desktop{
+    width: 70%;
+}
+
+.signature-mobile{
+    width: 90%;
+    display: none;
 }
 
 #about{
@@ -355,6 +360,15 @@ footer{
     body {
         font-size: 13px;
     }
+
+    .signature-desktop{
+        display: none;
+    }
+    
+    .signature-mobile{
+        display: inline;
+    }
+
     #about{
         flex-direction: column;
         width: 100vw;
@@ -389,12 +403,16 @@ footer{
     }
 
     #kostka .description-kostka p {
-        width: 90%;
+        width: 100%;
     }
 
     .container .link{
-        width: 90%;
+        width: 100%;
         margin-top: 20px;
+    }
+
+    .container .link div{
+        font-size: 18px;
     }
 
     #contact span{
